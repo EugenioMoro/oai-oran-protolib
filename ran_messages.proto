@@ -1,7 +1,5 @@
 syntax = "proto2";
 
-// import "ue_messages.proto";
-
 enum RAN_message_type{
     SUBSCRIPTION = 1;
     INDICATION_REQUEST = 2;
