@@ -14,6 +14,7 @@ enum RAN_parameter{
     UE_LIST = 3;
     SCHED_INFO_ = 4;
     SCHED_CONTROL = 5;
+    MAX_PRB = 6;
 }
 
 message RAN_param_map_entry{
