@@ -51,11 +51,24 @@ message RAN_message{
 
 message ue_info_m{
     required int32 rnti=1;
+
     optional float tbs_avg_dl=2;
     optional float tbs_avg_ul=3;
+
     optional float tbs_dl_toapply=4;
     optional float tbs_ul_toapply=5;
+
     optional bool is_GBR = 6; 
+
+    optional float dl_mac_buffer_occupation = 7;
+
+    optional float avg_prbs_dl = 8;
+    optional float avg_prbs_ul = 9;
+
+    optional int32 mcs = 10;
+
+    optional float avg_tbs_per_prb_dl = 11;
+    optional float avg_tbs_per_prb_ul = 12;
 }
 
 message ue_list_m{
