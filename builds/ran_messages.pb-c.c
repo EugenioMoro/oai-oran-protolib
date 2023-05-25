@@ -322,6 +322,51 @@ void   ue_list_m__free_unpacked
   assert(message->base.descriptor == &ue_list_m__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
+void   sched_control_m__init
+                     (SchedControlM         *message)
+{
+  static const SchedControlM init_value = SCHED_CONTROL_M__INIT;
+  *message = init_value;
+}
+size_t sched_control_m__get_packed_size
+                     (const SchedControlM *message)
+{
+  assert(message->base.descriptor == &sched_control_m__descriptor);
+  return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
+}
+size_t sched_control_m__pack
+                     (const SchedControlM *message,
+                      uint8_t       *out)
+{
+  assert(message->base.descriptor == &sched_control_m__descriptor);
+  return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
+}
+size_t sched_control_m__pack_to_buffer
+                     (const SchedControlM *message,
+                      ProtobufCBuffer *buffer)
+{
+  assert(message->base.descriptor == &sched_control_m__descriptor);
+  return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
+}
+SchedControlM *
+       sched_control_m__unpack
+                     (ProtobufCAllocator  *allocator,
+                      size_t               len,
+                      const uint8_t       *data)
+{
+  return (SchedControlM *)
+     protobuf_c_message_unpack (&sched_control_m__descriptor,
+                                allocator, len, data);
+}
+void   sched_control_m__free_unpacked
+                     (SchedControlM *message,
+                      ProtobufCAllocator *allocator)
+{
+  if(!message)
+    return;
+  assert(message->base.descriptor == &sched_control_m__descriptor);
+  protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
+}
 static const ProtobufCFieldDescriptor ran_param_map_entry__field_descriptors[4] =
 {
   {
@@ -744,6 +789,44 @@ const ProtobufCMessageDescriptor ue_list_m__descriptor =
   (ProtobufCMessageInit) ue_list_m__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
+static const ProtobufCFieldDescriptor sched_control_m__field_descriptors[1] =
+{
+  {
+    "max_cell_allocable_prbs",
+    1,
+    PROTOBUF_C_LABEL_OPTIONAL,
+    PROTOBUF_C_TYPE_INT32,
+    offsetof(SchedControlM, has_max_cell_allocable_prbs),
+    offsetof(SchedControlM, max_cell_allocable_prbs),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
+};
+static const unsigned sched_control_m__field_indices_by_name[] = {
+  0,   /* field[0] = max_cell_allocable_prbs */
+};
+static const ProtobufCIntRange sched_control_m__number_ranges[1 + 1] =
+{
+  { 1, 0 },
+  { 0, 1 }
+};
+const ProtobufCMessageDescriptor sched_control_m__descriptor =
+{
+  PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
+  "sched_control_m",
+  "SchedControlM",
+  "SchedControlM",
+  "",
+  sizeof(SchedControlM),
+  1,
+  sched_control_m__field_descriptors,
+  sched_control_m__field_indices_by_name,
+  1,  sched_control_m__number_ranges,
+  (ProtobufCMessageInit) sched_control_m__init,
+  NULL,NULL,NULL    /* reserved[123] */
+};
 static const ProtobufCEnumValue ran_message_type__enum_values_by_number[5] =
 {
   { "SUBSCRIPTION", "RAN_MESSAGE_TYPE__SUBSCRIPTION", 1 },
@@ -778,18 +861,22 @@ const ProtobufCEnumDescriptor ran_message_type__descriptor =
   ran_message_type__value_ranges,
   NULL,NULL,NULL,NULL   /* reserved[1234] */
 };
-static const ProtobufCEnumValue ran_parameter__enum_values_by_number[3] =
+static const ProtobufCEnumValue ran_parameter__enum_values_by_number[5] =
 {
   { "GNB_ID", "RAN_PARAMETER__GNB_ID", 1 },
   { "SOMETHING", "RAN_PARAMETER__SOMETHING", 2 },
   { "UE_LIST", "RAN_PARAMETER__UE_LIST", 3 },
+  { "SCHED_INFO_", "RAN_PARAMETER__SCHED_INFO_", 4 },
+  { "SCHED_CONTROL", "RAN_PARAMETER__SCHED_CONTROL", 5 },
 };
 static const ProtobufCIntRange ran_parameter__value_ranges[] = {
-{1, 0},{0, 3}
+{1, 0},{0, 5}
 };
-static const ProtobufCEnumValueIndex ran_parameter__enum_values_by_name[3] =
+static const ProtobufCEnumValueIndex ran_parameter__enum_values_by_name[5] =
 {
   { "GNB_ID", 0 },
+  { "SCHED_CONTROL", 4 },
+  { "SCHED_INFO_", 3 },
   { "SOMETHING", 1 },
   { "UE_LIST", 2 },
 };
@@ -800,9 +887,9 @@ const ProtobufCEnumDescriptor ran_parameter__descriptor =
   "RAN_parameter",
   "RANParameter",
   "",
-  3,
+  5,
   ran_parameter__enum_values_by_number,
-  3,
+  5,
   ran_parameter__enum_values_by_name,
   1,
   ran_parameter__value_ranges,

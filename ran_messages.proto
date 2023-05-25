@@ -1,7 +1,5 @@
 syntax = "proto2";
 
-// import "ue_messages.proto";
-
 enum RAN_message_type{
     SUBSCRIPTION = 1;
     INDICATION_REQUEST = 2;
@@ -14,6 +12,8 @@ enum RAN_parameter{
     GNB_ID = 1;
     SOMETHING = 2;
     UE_LIST = 3;
+    SCHED_INFO_ = 4;
+    SCHED_CONTROL = 5;
 }
 
 message RAN_param_map_entry{
@@ -49,6 +49,8 @@ message RAN_message{
     }
 }
 
+/* SPECIFIC MESSAGES */
+
 message ue_info_m{
     required int32 rnti=1;
 
@@ -74,4 +76,8 @@ message ue_info_m{
 message ue_list_m{
   required int32 connected_ues = 1;
   repeated ue_info_m ue_info = 2;
+}
+
+message sched_control_m{
+    optional int32 max_cell_allocable_prbs = 1;
 }
