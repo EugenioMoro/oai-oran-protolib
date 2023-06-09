@@ -40,7 +40,9 @@ typedef enum _RANParameter {
   RAN_PARAMETER__SOMETHING = 2,
   RAN_PARAMETER__UE_LIST = 3,
   RAN_PARAMETER__SCHED_INFO_ = 4,
-  RAN_PARAMETER__SCHED_CONTROL = 5
+  RAN_PARAMETER__SCHED_CONTROL = 5,
+  RAN_PARAMETER__MAX_PRB = 6,
+  RAN_PARAMETER__USE_TRUE_GBR = 7
     PROTOBUF_C__FORCE_ENUM_TO_BE_INT_SIZE(RAN_PARAMETER)
 } RANParameter;
 
@@ -50,7 +52,8 @@ typedef enum {
   RAN_PARAM_MAP_ENTRY__VALUE__NOT_SET = 0,
   RAN_PARAM_MAP_ENTRY__VALUE_INT64_VALUE = 2,
   RAN_PARAM_MAP_ENTRY__VALUE_STRING_VALUE = 3,
-  RAN_PARAM_MAP_ENTRY__VALUE_UE_LIST = 4
+  RAN_PARAM_MAP_ENTRY__VALUE_UE_LIST = 4,
+  RAN_PARAM_MAP_ENTRY__VALUE_BOOL_VALUE = 5
     PROTOBUF_C__FORCE_ENUM_TO_BE_INT_SIZE(RAN_PARAM_MAP_ENTRY__VALUE)
 } RANParamMapEntry__ValueCase;
 
@@ -63,6 +66,7 @@ struct  _RANParamMapEntry
     int64_t int64_value;
     char *string_value;
     UeListM *ue_list;
+    protobuf_c_boolean bool_value;
   };
 };
 #define RAN_PARAM_MAP_ENTRY__INIT \
@@ -144,10 +148,22 @@ struct  _UeInfoM
   float tbs_ul_toapply;
   protobuf_c_boolean has_is_gbr;
   protobuf_c_boolean is_gbr;
+  protobuf_c_boolean has_dl_mac_buffer_occupation;
+  float dl_mac_buffer_occupation;
+  protobuf_c_boolean has_avg_prbs_dl;
+  float avg_prbs_dl;
+  protobuf_c_boolean has_avg_prbs_ul;
+  float avg_prbs_ul;
+  protobuf_c_boolean has_mcs;
+  int32_t mcs;
+  protobuf_c_boolean has_avg_tbs_per_prb_dl;
+  float avg_tbs_per_prb_dl;
+  protobuf_c_boolean has_avg_tbs_per_prb_ul;
+  float avg_tbs_per_prb_ul;
 };
 #define UE_INFO_M__INIT \
  { PROTOBUF_C_MESSAGE_INIT (&ue_info_m__descriptor) \
-    , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+    , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
 
 
 struct  _UeListM

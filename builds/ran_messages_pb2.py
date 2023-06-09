@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto2',
   serialized_options=None,
-  serialized_pb=_b('\n\x12ran_messages.proto\"\x89\x01\n\x13RAN_param_map_entry\x12\x1b\n\x03key\x18\x01 \x02(\x0e\x32\x0e.RAN_parameter\x12\x15\n\x0bint64_value\x18\x02 \x01(\x03H\x00\x12\x16\n\x0cstring_value\x18\x03 \x01(\tH\x00\x12\x1d\n\x07ue_list\x18\x04 \x01(\x0b\x32\n.ue_list_mH\x00\x42\x07\n\x05value\"?\n\x16RAN_indication_request\x12%\n\rtarget_params\x18\x01 \x03(\x0e\x32\x0e.RAN_parameter\"B\n\x17RAN_indication_response\x12\'\n\tparam_map\x18\x01 \x03(\x0b\x32\x14.RAN_param_map_entry\"E\n\x13RAN_control_request\x12.\n\x10target_param_map\x18\x01 \x03(\x0b\x32\x14.RAN_param_map_entry\"\xea\x01\n\x0bRAN_message\x12#\n\x08msg_type\x18\x01 \x02(\x0e\x32\x11.RAN_message_type\x12\x39\n\x16ran_indication_request\x18\x02 \x01(\x0b\x32\x17.RAN_indication_requestH\x00\x12;\n\x17ran_indication_response\x18\x03 \x01(\x0b\x32\x18.RAN_indication_responseH\x00\x12\x33\n\x13ran_control_request\x18\x04 \x01(\x0b\x32\x14.RAN_control_requestH\x00\x42\t\n\x07payload\"\x81\x01\n\tue_info_m\x12\x0c\n\x04rnti\x18\x01 \x02(\x05\x12\x12\n\ntbs_avg_dl\x18\x02 \x01(\x02\x12\x12\n\ntbs_avg_ul\x18\x03 \x01(\x02\x12\x16\n\x0etbs_dl_toapply\x18\x04 \x01(\x02\x12\x16\n\x0etbs_ul_toapply\x18\x05 \x01(\x02\x12\x0e\n\x06is_GBR\x18\x06 \x01(\x08\"?\n\tue_list_m\x12\x15\n\rconnected_ues\x18\x01 \x02(\x05\x12\x1b\n\x07ue_info\x18\x02 \x03(\x0b\x32\n.ue_info_m\"2\n\x0fsched_control_m\x12\x1f\n\x17max_cell_allocable_prbs\x18\x01 \x01(\x05*v\n\x10RAN_message_type\x12\x10\n\x0cSUBSCRIPTION\x10\x01\x12\x16\n\x12INDICATION_REQUEST\x10\x02\x12\x17\n\x13INDICATION_RESPONSE\x10\x03\x12\x0b\n\x07\x43ONTROL\x10\x04\x12\x12\n\x0eSOMETHING_ELSE\x10\x05*[\n\rRAN_parameter\x12\n\n\x06GNB_ID\x10\x01\x12\r\n\tSOMETHING\x10\x02\x12\x0b\n\x07UE_LIST\x10\x03\x12\x0f\n\x0bSCHED_INFO_\x10\x04\x12\x11\n\rSCHED_CONTROL\x10\x05')
+  serialized_pb=_b('\n\x12ran_messages.proto\"\x9f\x01\n\x13RAN_param_map_entry\x12\x1b\n\x03key\x18\x01 \x02(\x0e\x32\x0e.RAN_parameter\x12\x15\n\x0bint64_value\x18\x02 \x01(\x03H\x00\x12\x16\n\x0cstring_value\x18\x03 \x01(\tH\x00\x12\x1d\n\x07ue_list\x18\x04 \x01(\x0b\x32\n.ue_list_mH\x00\x12\x14\n\nbool_value\x18\x05 \x01(\x08H\x00\x42\x07\n\x05value\"?\n\x16RAN_indication_request\x12%\n\rtarget_params\x18\x01 \x03(\x0e\x32\x0e.RAN_parameter\"B\n\x17RAN_indication_response\x12\'\n\tparam_map\x18\x01 \x03(\x0b\x32\x14.RAN_param_map_entry\"E\n\x13RAN_control_request\x12.\n\x10target_param_map\x18\x01 \x03(\x0b\x32\x14.RAN_param_map_entry\"\xea\x01\n\x0bRAN_message\x12#\n\x08msg_type\x18\x01 \x02(\x0e\x32\x11.RAN_message_type\x12\x39\n\x16ran_indication_request\x18\x02 \x01(\x0b\x32\x17.RAN_indication_requestH\x00\x12;\n\x17ran_indication_response\x18\x03 \x01(\x0b\x32\x18.RAN_indication_responseH\x00\x12\x33\n\x13ran_control_request\x18\x04 \x01(\x0b\x32\x14.RAN_control_requestH\x00\x42\t\n\x07payload\"\x92\x02\n\tue_info_m\x12\x0c\n\x04rnti\x18\x01 \x02(\x05\x12\x12\n\ntbs_avg_dl\x18\x02 \x01(\x02\x12\x12\n\ntbs_avg_ul\x18\x03 \x01(\x02\x12\x16\n\x0etbs_dl_toapply\x18\x04 \x01(\x02\x12\x16\n\x0etbs_ul_toapply\x18\x05 \x01(\x02\x12\x0e\n\x06is_GBR\x18\x06 \x01(\x08\x12 \n\x18\x64l_mac_buffer_occupation\x18\x07 \x01(\x02\x12\x13\n\x0b\x61vg_prbs_dl\x18\x08 \x01(\x02\x12\x13\n\x0b\x61vg_prbs_ul\x18\t \x01(\x02\x12\x0b\n\x03mcs\x18\n \x01(\x05\x12\x1a\n\x12\x61vg_tbs_per_prb_dl\x18\x0b \x01(\x02\x12\x1a\n\x12\x61vg_tbs_per_prb_ul\x18\x0c \x01(\x02\"?\n\tue_list_m\x12\x15\n\rconnected_ues\x18\x01 \x02(\x05\x12\x1b\n\x07ue_info\x18\x02 \x03(\x0b\x32\n.ue_info_m\"2\n\x0fsched_control_m\x12\x1f\n\x17max_cell_allocable_prbs\x18\x01 \x01(\x05*v\n\x10RAN_message_type\x12\x10\n\x0cSUBSCRIPTION\x10\x01\x12\x16\n\x12INDICATION_REQUEST\x10\x02\x12\x17\n\x13INDICATION_RESPONSE\x10\x03\x12\x0b\n\x07\x43ONTROL\x10\x04\x12\x12\n\x0eSOMETHING_ELSE\x10\x05*z\n\rRAN_parameter\x12\n\n\x06GNB_ID\x10\x01\x12\r\n\tSOMETHING\x10\x02\x12\x0b\n\x07UE_LIST\x10\x03\x12\x0f\n\x0bSCHED_INFO_\x10\x04\x12\x11\n\rSCHED_CONTROL\x10\x05\x12\x0b\n\x07MAX_PRB\x10\x06\x12\x10\n\x0cUSE_TRUE_GBR\x10\x07')
 )
 
 _RAN_MESSAGE_TYPE = _descriptor.EnumDescriptor(
@@ -52,8 +52,8 @@ _RAN_MESSAGE_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=852,
-  serialized_end=970,
+  serialized_start=1019,
+  serialized_end=1137,
 )
 _sym_db.RegisterEnumDescriptor(_RAN_MESSAGE_TYPE)
 
@@ -84,11 +84,19 @@ _RAN_PARAMETER = _descriptor.EnumDescriptor(
       name='SCHED_CONTROL', index=4, number=5,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MAX_PRB', index=5, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='USE_TRUE_GBR', index=6, number=7,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=972,
-  serialized_end=1063,
+  serialized_start=1139,
+  serialized_end=1261,
 )
 _sym_db.RegisterEnumDescriptor(_RAN_PARAMETER)
 
@@ -103,6 +111,8 @@ SOMETHING = 2
 UE_LIST = 3
 SCHED_INFO_ = 4
 SCHED_CONTROL = 5
+MAX_PRB = 6
+USE_TRUE_GBR = 7
 
 
 
@@ -141,6 +151,13 @@ _RAN_PARAM_MAP_ENTRY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bool_value', full_name='RAN_param_map_entry.bool_value', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -157,7 +174,7 @@ _RAN_PARAM_MAP_ENTRY = _descriptor.Descriptor(
       index=0, containing_type=None, fields=[]),
   ],
   serialized_start=23,
-  serialized_end=160,
+  serialized_end=182,
 )
 
 
@@ -187,8 +204,8 @@ _RAN_INDICATION_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=162,
-  serialized_end=225,
+  serialized_start=184,
+  serialized_end=247,
 )
 
 
@@ -218,8 +235,8 @@ _RAN_INDICATION_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=227,
-  serialized_end=293,
+  serialized_start=249,
+  serialized_end=315,
 )
 
 
@@ -249,8 +266,8 @@ _RAN_CONTROL_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=295,
-  serialized_end=364,
+  serialized_start=317,
+  serialized_end=386,
 )
 
 
@@ -304,8 +321,8 @@ _RAN_MESSAGE = _descriptor.Descriptor(
       name='payload', full_name='RAN_message.payload',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=367,
-  serialized_end=601,
+  serialized_start=389,
+  serialized_end=623,
 )
 
 
@@ -358,6 +375,48 @@ _UE_INFO_M = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='dl_mac_buffer_occupation', full_name='ue_info_m.dl_mac_buffer_occupation', index=6,
+      number=7, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='avg_prbs_dl', full_name='ue_info_m.avg_prbs_dl', index=7,
+      number=8, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='avg_prbs_ul', full_name='ue_info_m.avg_prbs_ul', index=8,
+      number=9, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='mcs', full_name='ue_info_m.mcs', index=9,
+      number=10, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='avg_tbs_per_prb_dl', full_name='ue_info_m.avg_tbs_per_prb_dl', index=10,
+      number=11, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='avg_tbs_per_prb_ul', full_name='ue_info_m.avg_tbs_per_prb_ul', index=11,
+      number=12, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -370,8 +429,8 @@ _UE_INFO_M = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=604,
-  serialized_end=733,
+  serialized_start=626,
+  serialized_end=900,
 )
 
 
@@ -408,8 +467,8 @@ _UE_LIST_M = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=735,
-  serialized_end=798,
+  serialized_start=902,
+  serialized_end=965,
 )
 
 
@@ -439,8 +498,8 @@ _SCHED_CONTROL_M = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=800,
-  serialized_end=850,
+  serialized_start=967,
+  serialized_end=1017,
 )
 
 _RAN_PARAM_MAP_ENTRY.fields_by_name['key'].enum_type = _RAN_PARAMETER
@@ -454,6 +513,9 @@ _RAN_PARAM_MAP_ENTRY.fields_by_name['string_value'].containing_oneof = _RAN_PARA
 _RAN_PARAM_MAP_ENTRY.oneofs_by_name['value'].fields.append(
   _RAN_PARAM_MAP_ENTRY.fields_by_name['ue_list'])
 _RAN_PARAM_MAP_ENTRY.fields_by_name['ue_list'].containing_oneof = _RAN_PARAM_MAP_ENTRY.oneofs_by_name['value']
+_RAN_PARAM_MAP_ENTRY.oneofs_by_name['value'].fields.append(
+  _RAN_PARAM_MAP_ENTRY.fields_by_name['bool_value'])
+_RAN_PARAM_MAP_ENTRY.fields_by_name['bool_value'].containing_oneof = _RAN_PARAM_MAP_ENTRY.oneofs_by_name['value']
 _RAN_INDICATION_REQUEST.fields_by_name['target_params'].enum_type = _RAN_PARAMETER
 _RAN_INDICATION_RESPONSE.fields_by_name['param_map'].message_type = _RAN_PARAM_MAP_ENTRY
 _RAN_CONTROL_REQUEST.fields_by_name['target_param_map'].message_type = _RAN_PARAM_MAP_ENTRY

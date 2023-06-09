@@ -367,7 +367,7 @@ void   sched_control_m__free_unpacked
   assert(message->base.descriptor == &sched_control_m__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-static const ProtobufCFieldDescriptor ran_param_map_entry__field_descriptors[4] =
+static const ProtobufCFieldDescriptor ran_param_map_entry__field_descriptors[5] =
 {
   {
     "key",
@@ -417,8 +417,21 @@ static const ProtobufCFieldDescriptor ran_param_map_entry__field_descriptors[4] 
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
+  {
+    "bool_value",
+    5,
+    PROTOBUF_C_LABEL_OPTIONAL,
+    PROTOBUF_C_TYPE_BOOL,
+    offsetof(RANParamMapEntry, value_case),
+    offsetof(RANParamMapEntry, bool_value),
+    NULL,
+    NULL,
+    0 | PROTOBUF_C_FIELD_FLAG_ONEOF,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
 };
 static const unsigned ran_param_map_entry__field_indices_by_name[] = {
+  4,   /* field[4] = bool_value */
   1,   /* field[1] = int64_value */
   0,   /* field[0] = key */
   2,   /* field[2] = string_value */
@@ -427,7 +440,7 @@ static const unsigned ran_param_map_entry__field_indices_by_name[] = {
 static const ProtobufCIntRange ran_param_map_entry__number_ranges[1 + 1] =
 {
   { 1, 0 },
-  { 0, 4 }
+  { 0, 5 }
 };
 const ProtobufCMessageDescriptor ran_param_map_entry__descriptor =
 {
@@ -437,7 +450,7 @@ const ProtobufCMessageDescriptor ran_param_map_entry__descriptor =
   "RANParamMapEntry",
   "",
   sizeof(RANParamMapEntry),
-  4,
+  5,
   ran_param_map_entry__field_descriptors,
   ran_param_map_entry__field_indices_by_name,
   1,  ran_param_map_entry__number_ranges,
@@ -635,7 +648,7 @@ const ProtobufCMessageDescriptor ran_message__descriptor =
   (ProtobufCMessageInit) ran_message__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[6] =
+static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[12] =
 {
   {
     "rnti",
@@ -709,9 +722,87 @@ static const ProtobufCFieldDescriptor ue_info_m__field_descriptors[6] =
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
+  {
+    "dl_mac_buffer_occupation",
+    7,
+    PROTOBUF_C_LABEL_OPTIONAL,
+    PROTOBUF_C_TYPE_FLOAT,
+    offsetof(UeInfoM, has_dl_mac_buffer_occupation),
+    offsetof(UeInfoM, dl_mac_buffer_occupation),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
+  {
+    "avg_prbs_dl",
+    8,
+    PROTOBUF_C_LABEL_OPTIONAL,
+    PROTOBUF_C_TYPE_FLOAT,
+    offsetof(UeInfoM, has_avg_prbs_dl),
+    offsetof(UeInfoM, avg_prbs_dl),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
+  {
+    "avg_prbs_ul",
+    9,
+    PROTOBUF_C_LABEL_OPTIONAL,
+    PROTOBUF_C_TYPE_FLOAT,
+    offsetof(UeInfoM, has_avg_prbs_ul),
+    offsetof(UeInfoM, avg_prbs_ul),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
+  {
+    "mcs",
+    10,
+    PROTOBUF_C_LABEL_OPTIONAL,
+    PROTOBUF_C_TYPE_INT32,
+    offsetof(UeInfoM, has_mcs),
+    offsetof(UeInfoM, mcs),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
+  {
+    "avg_tbs_per_prb_dl",
+    11,
+    PROTOBUF_C_LABEL_OPTIONAL,
+    PROTOBUF_C_TYPE_FLOAT,
+    offsetof(UeInfoM, has_avg_tbs_per_prb_dl),
+    offsetof(UeInfoM, avg_tbs_per_prb_dl),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
+  {
+    "avg_tbs_per_prb_ul",
+    12,
+    PROTOBUF_C_LABEL_OPTIONAL,
+    PROTOBUF_C_TYPE_FLOAT,
+    offsetof(UeInfoM, has_avg_tbs_per_prb_ul),
+    offsetof(UeInfoM, avg_tbs_per_prb_ul),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
 };
 static const unsigned ue_info_m__field_indices_by_name[] = {
+  7,   /* field[7] = avg_prbs_dl */
+  8,   /* field[8] = avg_prbs_ul */
+  10,   /* field[10] = avg_tbs_per_prb_dl */
+  11,   /* field[11] = avg_tbs_per_prb_ul */
+  6,   /* field[6] = dl_mac_buffer_occupation */
   5,   /* field[5] = is_GBR */
+  9,   /* field[9] = mcs */
   0,   /* field[0] = rnti */
   1,   /* field[1] = tbs_avg_dl */
   2,   /* field[2] = tbs_avg_ul */
@@ -721,7 +812,7 @@ static const unsigned ue_info_m__field_indices_by_name[] = {
 static const ProtobufCIntRange ue_info_m__number_ranges[1 + 1] =
 {
   { 1, 0 },
-  { 0, 6 }
+  { 0, 12 }
 };
 const ProtobufCMessageDescriptor ue_info_m__descriptor =
 {
@@ -731,7 +822,7 @@ const ProtobufCMessageDescriptor ue_info_m__descriptor =
   "UeInfoM",
   "",
   sizeof(UeInfoM),
-  6,
+  12,
   ue_info_m__field_descriptors,
   ue_info_m__field_indices_by_name,
   1,  ue_info_m__number_ranges,
@@ -861,24 +952,28 @@ const ProtobufCEnumDescriptor ran_message_type__descriptor =
   ran_message_type__value_ranges,
   NULL,NULL,NULL,NULL   /* reserved[1234] */
 };
-static const ProtobufCEnumValue ran_parameter__enum_values_by_number[5] =
+static const ProtobufCEnumValue ran_parameter__enum_values_by_number[7] =
 {
   { "GNB_ID", "RAN_PARAMETER__GNB_ID", 1 },
   { "SOMETHING", "RAN_PARAMETER__SOMETHING", 2 },
   { "UE_LIST", "RAN_PARAMETER__UE_LIST", 3 },
   { "SCHED_INFO_", "RAN_PARAMETER__SCHED_INFO_", 4 },
   { "SCHED_CONTROL", "RAN_PARAMETER__SCHED_CONTROL", 5 },
+  { "MAX_PRB", "RAN_PARAMETER__MAX_PRB", 6 },
+  { "USE_TRUE_GBR", "RAN_PARAMETER__USE_TRUE_GBR", 7 },
 };
 static const ProtobufCIntRange ran_parameter__value_ranges[] = {
-{1, 0},{0, 5}
+{1, 0},{0, 7}
 };
-static const ProtobufCEnumValueIndex ran_parameter__enum_values_by_name[5] =
+static const ProtobufCEnumValueIndex ran_parameter__enum_values_by_name[7] =
 {
   { "GNB_ID", 0 },
+  { "MAX_PRB", 5 },
   { "SCHED_CONTROL", 4 },
   { "SCHED_INFO_", 3 },
   { "SOMETHING", 1 },
   { "UE_LIST", 2 },
+  { "USE_TRUE_GBR", 6 },
 };
 const ProtobufCEnumDescriptor ran_parameter__descriptor =
 {
@@ -887,9 +982,9 @@ const ProtobufCEnumDescriptor ran_parameter__descriptor =
   "RAN_parameter",
   "RANParameter",
   "",
-  5,
+  7,
   ran_parameter__enum_values_by_number,
-  5,
+  7,
   ran_parameter__enum_values_by_name,
   1,
   ran_parameter__value_ranges,
