@@ -952,7 +952,7 @@ const ProtobufCEnumDescriptor ran_message_type__descriptor =
   ran_message_type__value_ranges,
   NULL,NULL,NULL,NULL   /* reserved[1234] */
 };
-static const ProtobufCEnumValue ran_parameter__enum_values_by_number[7] =
+static const ProtobufCEnumValue ran_parameter__enum_values_by_number[9] =
 {
   { "GNB_ID", "RAN_PARAMETER__GNB_ID", 1 },
   { "SOMETHING", "RAN_PARAMETER__SOMETHING", 2 },
@@ -961,13 +961,17 @@ static const ProtobufCEnumValue ran_parameter__enum_values_by_number[7] =
   { "SCHED_CONTROL", "RAN_PARAMETER__SCHED_CONTROL", 5 },
   { "MAX_PRB", "RAN_PARAMETER__MAX_PRB", 6 },
   { "USE_TRUE_GBR", "RAN_PARAMETER__USE_TRUE_GBR", 7 },
+  { "IQ_MAPPING", "RAN_PARAMETER__IQ_MAPPING", 8 },
+  { "INCUMBENT_ACTION", "RAN_PARAMETER__INCUMBENT_ACTION", 9 },
 };
 static const ProtobufCIntRange ran_parameter__value_ranges[] = {
-{1, 0},{0, 7}
+{1, 0},{0, 9}
 };
-static const ProtobufCEnumValueIndex ran_parameter__enum_values_by_name[7] =
+static const ProtobufCEnumValueIndex ran_parameter__enum_values_by_name[9] =
 {
   { "GNB_ID", 0 },
+  { "INCUMBENT_ACTION", 8 },
+  { "IQ_MAPPING", 7 },
   { "MAX_PRB", 5 },
   { "SCHED_CONTROL", 4 },
   { "SCHED_INFO_", 3 },
@@ -982,9 +986,9 @@ const ProtobufCEnumDescriptor ran_parameter__descriptor =
   "RAN_parameter",
   "RANParameter",
   "",
-  7,
+  9,
   ran_parameter__enum_values_by_number,
-  7,
+  9,
   ran_parameter__enum_values_by_name,
   1,
   ran_parameter__value_ranges,

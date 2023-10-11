@@ -16,6 +16,8 @@ enum RAN_parameter{
     SCHED_CONTROL = 5;
     MAX_PRB = 6;
     USE_TRUE_GBR = 7;
+    IQ_MAPPING = 8;
+    INCUMBENT_ACTION = 9;
 }
 
 message RAN_param_map_entry{
